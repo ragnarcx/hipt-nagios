@@ -50,14 +50,14 @@ usermod -a -G nagcmd apache
 <a name="3"></a>
 #### 3. Cài đặt Nagios Core và Plugin
 
-Chúng ta tải Nagios Core về server. Tại thời điểm viết bài, phiên bản mới nhất là Nagios Core 4.4.1. Để cập nhật mới nhất, vui lòng bấm vào [đây](https://www.nagios.org/download/).
+Tải bản cài đặt Nagios Core về server. Tại thời điểm viết bài, phiên bản mới nhất là Nagios Core 4.4.1. Để cập nhật mới nhất, vui lòng bấm vào [đây](https://www.nagios.org/download/).
 
 ```sh
 cd /opt
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.1.tar.gz
 ```
 
-Sau khi tải xong, chúng ta cùng giải nén và bắt đầu phần biên dịch Nagios Core và Plugin trên máy chủ mà ta muốn cài Nagios.
+Sau khi tải xong, giải nén và bắt đầu phần biên dịch Nagios Core và Plugin trên máy chủ mà ta muốn cài Nagios.
 
 - **Bước 1**: Giải nén source Nagios
 
@@ -117,7 +117,7 @@ Khởi động lại Apache và chạy `nagios`, cho phép khởi động cùng 
 ```sh
 systemctl enable httpd
 systemctl restart httpd
-service nagios restart
+systemctl restart nagios
 ```
 
 Để kiểm tra, hãy truy cập vào giao diện Web và đăng nhập bằng `nagiosadmin` và Password vừa tạo ở địa chỉ:
@@ -126,4 +126,4 @@ service nagios restart
  ```sh
  http://<nagios_ip_address>/nagios
   ```
-<image src="https://i.imgur.com/R0U5rs4.jpg" />
+<image src="https://i.imgur.com/EALdsdd.jpg" />
